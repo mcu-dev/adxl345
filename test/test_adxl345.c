@@ -15,7 +15,7 @@ void test_adxl345_setup(void) {
 }
 
 void test_adxl345_online(void) {
-  uint8_t read_data_result = 0x0E;
+  uint8_t read_data_result = 0xE5;
   i2c_read_byte_ExpectAndReturn(ADXL345_I2C_ADDRESS, ADXL345_REG_DEV_ID, NULL,
                                 ADXL345_STATUS_SUCCESS);
   i2c_read_byte_IgnoreArg_read_data();
