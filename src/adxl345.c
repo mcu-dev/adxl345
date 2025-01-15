@@ -61,7 +61,7 @@ bool adxl345_online(void) {
       ADXL345_STATUS_SUCCESS) {
     return ADXL345_STATUS_API_ERR;
   }
-  if (val != 0x0E) {
+  if (val != ADXL345_DEV_ID) {
     return false;
   }
   return true;
